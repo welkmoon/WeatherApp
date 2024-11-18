@@ -1,3 +1,5 @@
+import template from '../src/templates/weather-template.mustache';
+
 import mustache from "mustache";
 
 const apiKey = '6da49ccf77186e47ae9fa30b49cef84b';
@@ -18,6 +20,7 @@ showWeatherBtn.addEventListener('click', e => {
         .then(response => {
             if (response.ok) {
                 return response.json();
+                
             } else {
                 throw new Error(   //throw зупиняє подальше виконання коду в межах поточного блоку, new Error(...) створює новий об'єкт помилки типу Error, який містить повідомлення про помилку.
                     `City not found or server problem.  Error code: ${response.status}`
@@ -31,7 +34,7 @@ showWeatherBtn.addEventListener('click', e => {
                 temp: Math.round(data.main.temp),
                 descr: data.weather[0].description,
                 humidity: data.main.humidity,
-                windSspeed: data.wind.speed,
+                windSpeed: data.wind.speed,
                 sunrise: timeConverter(data.sys.sunrise),
                 sunset: timeConverter(data.sys.sunset),
                 time: timeConverter(data.dt),
@@ -50,20 +53,14 @@ showWeatherBtn.addEventListener('click', e => {
 });
 
 function renderWeather(data) {
-    // Отримуємо шаблон з HTML
-    const template = document.querySelector('#weather-template').innerHTML;
-  
-    // Генеруємо HTML на основі шаблону та даних
-    const rendered = mustache.render(template, data);
-  
-    // Додаємо згенерований контент у контейнер
-    const weatherInfoWrap = document.querySelector('.weather-info-wrap');
-    weatherInfoWrap.innerHTML = rendered;
-  
-    // Показуємо елемент (видаляємо клас 'none')
-    weatherInfoWrap.classList.remove('none');
-    weatherInfoWrap.classList.add('acc');
-  }
+
+  const rendered = mustache.render(template, data);   // Генерація HTML з шаблону та даних
+
+  weatherInfoWrap.innerHTML = rendered;
+
+  weatherInfoWrap.classList.remove('none');
+  weatherInfoWrap.classList.add('acc');
+}
 
 function timeConverter(UNIX_timestamp) {
     var a = new Date(UNIX_timestamp * 1000);
@@ -85,12 +82,12 @@ function timeConverter(UNIX_timestamp) {
     return time;
   }
 
-  function getWindDirection(degree) {
-    const directions = [
-      'North', 'Northeast', 'East', 'Southeast', 'South', 'Southwest', 'West', 'Northwest'
-    ];
-    const index = Math.round(degree / 45) % 8;
-    return directions[index];
-  }
+  // function getWindDirection(degree) {
+  //   const directions = [
+  //     'North', 'Northeast', 'East', 'Southeast', 'South', 'Southwest', 'West', 'Northwest'
+  //   ];
+  //   const index = Math.round(degree / 45) % 8;
+  //   return directions[index];
+  // }
   
   

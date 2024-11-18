@@ -1,0 +1,38 @@
+<section class="weather-info">
+    <div class="weather-icon">
+        <img src="https://openweathermap.org/img/wn/{{icon}}@4x.png" alt="weather icon" />
+        <div class="test"></div>
+    </div>
+    <div class="weather-temp">{{temp}}°<span>C</span></div>
+    <div class="weather-descr">{{descr}}</div>
+    <div class="weather-time">{{time.date}} {{time.month}} {{time.year}}</div>
+    <div class="weather-city">{{city}}<span>{{country}}</span></div>
+</section>
+
+<section class="weather-detail">
+    <div class="weather-detail-item">
+        <img src="img/humidity_icon-2.svg" alt="humidity icon" />
+        <div>
+            <div class="weather-detail-item-value" id="humidity">{{humidity}}</div>
+            <div class="weather-detail-item-title">Humidity</div>
+        </div>
+    </div>
+    <div class="weather-detail-item">
+        <img src="img/wind_icon.svg" alt="wind-icon" />
+        <div>
+            <div class="weather-detail-item-value" id="wind">{{windSpeed}}</div>
+            <div class="weather-detail-item-title">Wind speed</div>
+        </div>
+    </div>
+</section>
+
+<section class="weather-detail footer">
+    <div class="weather-detail-item">
+        <div class="weather-detail-item-title">Sunrise</div>
+        <div class="weather-detail-item-value" id="sunrise">{{sunrise.hour}}:{{sunrise.min}}</div>
+    </div>
+    <div class="weather-detail-item">
+        <div class="weather-detail-item-title">Sunset</div>
+        <div class="weather-detail-item-value" id="sunset">{{sunset.hour}}:{{sunset.min}}</div>
+    </div>
+</section>

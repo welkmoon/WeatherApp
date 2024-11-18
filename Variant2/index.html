@@ -26,43 +26,7 @@
         </form>
         <div class="error none">Error</div>
         <div class="weather-info-wrap none">
-          <script id="weather-template" type="x-tmpl-mustache">
-            <div class="weather-info">
-              <div class="weather-icon">
-                <img src="https://openweathermap.org/img/wn/{{icon}}@4x.png" alt="Weather icon" />
-              </div>
-              <div class="weather-temp">{{temp}}°<span>C</span></div>
-              <div class="weather-descr">{{descr}}</div>
-              <div class="weather-city">{{city}}<span>{{country}}</span></div>
-              <div class="weather-time">{{time.date}} {{time.month}} {{time.year}}</div>
-              <section class="weather-detail">
-                <div class="weather-detail-item">
-                  <img src="img/humidity_icon-2.svg" alt="Humidity icon" />
-                  <div>
-                    <div class="weather-detail-item-value">{{humidity}}%</div>
-                    <div class="weather-detail-item-title">Humidity</div>
-                  </div>
-                </div>
-                <div class="weather-detail-item">
-                  <img src="img/wind_icon.svg" alt="Wind icon" />
-                  <div>
-                    <div class="weather-detail-item-value">{{windSspeed}} km/h</div>
-                    <div class="weather-detail-item-title">Wind speed</div>
-                  </div>
-                </div>
-              </section>
-              <section class="weather-detail footer">
-                <div class="weather-detail-item">
-                  <div class="weather-detail-item-title">Sunrise</div>
-                  <div class="weather-detail-item-value">{{sunrise.hour}}:{{sunrise.min}}</div>
-                </div>
-                <div class="weather-detail-item">
-                  <div class="weather-detail-item-title">Sunset</div>
-                  <div class="weather-detail-item-value">{{sunset.hour}}:{{sunset.min}}</div>
-                </div>
-              </section>
-            </div>
-          </script>
+          
         </div>
     </main>
     <script src="./dist/app.js"></script>
