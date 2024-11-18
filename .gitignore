@@ -1,0 +1,10 @@
+# Ігнорувати node_modules
+node_modules/
+
+# Ігнорувати файли конфігурацій, які не повинні бути у репозиторії
+npm-debug.log
+yarn-error.log
+
+# Ігнорувати залежності залежностей, наприклад, лог файли
+package-lock.json
+yarn.lock
