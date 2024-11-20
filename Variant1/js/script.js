@@ -81,12 +81,12 @@ function timeConverter(UNIX_timestamp) {
     return time;
   }
 
-  function getWindDirection(degree) {
-    const directions = [
-      'North', 'Northeast', 'East', 'Southeast', 'South', 'Southwest', 'West', 'Northwest'
-    ];
-    const index = Math.round(degree / 45) % 8;
-    return directions[index];
-  }
+//   function getWindDirection(degree) {
+//     const directions = [
+//       'North', 'Northeast', 'East', 'Southeast', 'South', 'Southwest', 'West', 'Northwest'
+//     ];
+//     const index = Math.round(degree / 45) % 8;
+//     return directions[index];
+//   }
   
   

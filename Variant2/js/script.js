@@ -63,24 +63,28 @@ function renderWeather(data) {
 }
 
 function timeConverter(UNIX_timestamp) {
-    var a = new Date(UNIX_timestamp * 1000);
-    var months = [
+    const dateObject = new Date(UNIX_timestamp * 1000); // об'єкт дати
+    const months = [
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
     ];
-    var year = a.getFullYear();
-    var month = months[a.getMonth()];
-    var date = a.getDate();
-    var hour = a.getHours();
-    var min = a.getMinutes() >= 10 ? a.getMinutes() : '0' + a.getMinutes();
-    let time = {
+    const year = dateObject.getFullYear();
+    const month = months[dateObject.getMonth()];
+    const date = dateObject.getDate();
+    const hour = dateObject.getHours();
+    const minutes = dateObject.getMinutes() >= 10 
+        ? dateObject.getMinutes() 
+        : '0' + dateObject.getMinutes();
+
+    const formattedTime = {
       date: date,
       month: month,
       year: year,
       hour: hour,
-      min: min,
+      min: minutes,
     };
-    return time;
-  }
+    return formattedTime;
+}
+
 
   // function getWindDirection(degree) {
   //   const directions = [
