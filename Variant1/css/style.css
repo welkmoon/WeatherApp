@@ -45,7 +45,7 @@ body {
 }
 
 .location-icon {
-  width: 24px;
+  width: 25px;
   opacity: 0.6;
   flex-shrink: 1;
 }
@@ -91,7 +91,7 @@ body {
   background: rgba(255, 255, 255, 0.2);
   box-shadow: inset 0 0 10px 1px rgba(92, 209, 165, 0.5);
   box-shadow: 0 3px 6px 0 rgba(0, 121, 145, 0.5);
-  margin-top: 66px;
+  margin-top: 65px;
   transition: all 0.5s ease-in-out;
 
   &:hover {
@@ -179,8 +179,8 @@ body {
 }
 
 .weather-city span {
-  width: 23px;
-  height: 23px;
+  width: 25px;
+  height: 25px;
   font-size: 0.4em;
   padding: 4px;
   border: 1px solid;
@@ -197,7 +197,7 @@ body {
 }
 
 .weather-detail.footer {
-  margin-top: 24px;
+  margin-top: 25px;
   justify-content: space-around;
 }
 
@@ -208,7 +208,7 @@ body {
 }
 
 .weather-detail-item img {
-  width: 36px;
+  width: 35px;
 }
 
 .weather-detail-item-value {
