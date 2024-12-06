@@ -154,6 +154,10 @@ body {
   padding-top: 0.625rem; 
 }
 
+.weather-descr::first-letter {
+  text-transform: uppercase;
+}
+
 .weather-temp {
   font-size: 4rem; 
   font-weight: 700;
