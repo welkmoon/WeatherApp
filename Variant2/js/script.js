@@ -14,7 +14,7 @@ showWeatherBtn.addEventListener('click', e => {
     input.value = '';
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric&lang=en`; //Формуємо URL для запиту до OpenWeatherMap API
 
-    let promise = fetch(apiUrl); //Відправка запиту (fetch(apiUrl) - це вбудована функція JavaScript, яка надсилає HTTP-запит до вказаного URL і повертає Promise)
+    const promise = fetch(apiUrl); //Відправка запиту (fetch(apiUrl) - це вбудована функція JavaScript, яка надсилає HTTP-запит до вказаного URL і повертає Promise)
 
     promise  //Обробка відповіді від API
         .then(response => {
